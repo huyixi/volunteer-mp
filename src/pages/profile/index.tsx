@@ -2,6 +2,8 @@ import { View, Text } from "@tarojs/components";
 import { useLoad } from "@tarojs/taro";
 import "./index.scss";
 
+import { Avatar } from "@taroify/core";
+
 export default function NewPage() {
   useLoad(() => {
     console.log("Page loaded.");
@@ -9,7 +11,7 @@ export default function NewPage() {
 
   return (
     <View className="profile">
-      <Text>Profile</Text>
+      <Avatar>P</Avatar>
     </View>
   );
 }

@@ -1,8 +1,6 @@
-import { View, Text, Image } from "@tarojs/components";
+import { View, Image } from "@tarojs/components";
 import { useLoad } from "@tarojs/taro";
 import "./index.scss";
-// 插件会自动将代码转化为方式二中的按需引入形式
-import { Button } from "@taroify/core";
 import { Swiper } from "@taroify/core";
 
 export default function Index() {
@@ -12,6 +10,10 @@ export default function Index() {
 
   return (
     <View className="index">
+      <View className="text-[#acc855] text-[100px]">1Hello world!</View>
+      <h1 className="text-3xl font-bold underline text-red-500">
+        Hello world!
+      </h1>
       <Swiper className="image-swiper" lazyRender autoplay={4000}>
         <Swiper.Indicator />
         <Swiper.Item>
@@ -39,13 +41,6 @@ export default function Index() {
           />
         </Swiper.Item>
       </Swiper>
-      <Text>Hello world!</Text>
-      <Button color="primary">主要按钮</Button>
-      <Button color="info">信息按钮</Button>
-      <Button color="success">成功按钮</Button>
-      <Button color="warning">警告按钮</Button>
-      <Button color="danger">危险按钮</Button>
-      <Button color="default">默认按钮</Button>
     </View>
   );
 }
